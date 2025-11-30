@@ -16,7 +16,7 @@ NONCE_SCRIPT="setup_nonce.sh"
 BINARY_NAME="shredcore-scalper-bot"
 
 # GitHub repository URL for auto-updates (set this for public releases)
-REPO_URL="https://github.com/shredcore/shredcore-scalper.git"
+REPO_URL="https://github.com/Shredcore-Blockchain-Tools/solana-scalper-bot.git"
 
 # ============================================================================
 # Git Auto-Update System
