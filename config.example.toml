@@ -115,11 +115,13 @@ MIN_PROFIT_TARGET_SECONDS = 30
 SIMULATE = false
 
 
-# === Scalper / DCA Settings ===
+# === DCA (Dollar Cost Averaging) Settings ===
+# DCA is independent of re-entry (scalping) behavior - it can fire on any open position.
+# DCA triggers when a position is underwater by a threshold for a configured duration.
 
 # Enable DCA (Dollar Cost Averaging) behavior.
 # When false, all DCA functionality is disabled regardless of other DCA settings.
-ENABLE_DCA = true
+ENABLE_DCA = false
 
 # Minimum interest score required to enter a trade (derived from volume, flow, dip).
 # Higher values filter out lower-quality opportunities. Set to 0.0 to disable scoring filter.
