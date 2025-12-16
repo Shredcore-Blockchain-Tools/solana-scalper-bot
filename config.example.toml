@@ -108,6 +108,17 @@ ENABLE_MIN_PROFIT_TARGET = true
 MIN_PROFIT_TARGET_PNL_PERCENT = 5
 MIN_PROFIT_TARGET_SECONDS = 30
 
+# === Volume Fade Exit ===
+# Automatically exit positions when trading activity dries up in late lifecycle phases.
+# This module protects against getting stuck in illiquid positions where exit slippage
+# would be severe. It only triggers when ALL conditions are met:
+#   1. Position is at least 30 seconds old (hardcoded to prevent false positives)
+#   2. Token is in Distribution or Fade phase (late lifecycle, volume declining)
+#   3. Recent 2-minute volume is below 5 SOL
+#   4. Recent 2-minute trade count is below 3 trades
+# When disabled, positions are held regardless of volume/activity levels.
+ENABLE_VOLUME_FADE_EXIT = false
+
 
 # === Simulation ===
 
